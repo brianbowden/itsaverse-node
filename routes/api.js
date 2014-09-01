@@ -23,6 +23,12 @@ router.post('/analyze', function(req, res) {
         if (!filepath) return;
 
         tess.process(filepath, function(err, text) {
+          fs.unlink(filepath, function(err) {
+            if (err) {
+              console.error(err);
+            }
+          });
+
           if (err) {
             console.error(err);
             res.json({status: "nope", 'error': error});
