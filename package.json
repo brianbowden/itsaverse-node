@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "redis": "x",
     "express": "~4.2.0",
     "static-favicon": "~1.0.0",
     "morgan": "~1.0.0",
@@ -15,6 +16,8 @@
     "hjs": "~0.0.6",
     "node-compass": "0.2.3",
     "connect-busboy": "~0.0.1",
-    "node-tesseract": "~0.2.6"
+    "node-tesseract": "~0.2.6",
+    "node-uuid": "~1.4.1",
+    "passport": "0.2.1"
   }
 }
