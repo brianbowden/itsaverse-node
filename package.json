@@ -13,6 +13,7 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "hjs": "~0.0.6",
-    "node-compass": "0.2.3"
+    "node-compass": "0.2.3",
+    "connect-busboy": "~0.0.1"
   }
 }
