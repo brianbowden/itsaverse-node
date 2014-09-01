@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var busboy = require('connect-busboy');
 
 var routes = require('./routes/index');
 var apiRoutes = require('./routes/api');
@@ -22,9 +23,10 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(busboy());
 
 app.use('/', routes);
-api.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 app.use('/users', users);
 
 /// catch 404 and forward to error handler
