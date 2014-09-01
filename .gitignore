@@ -1,2 +1,3 @@
 init_api_keys.js
+node_modules/
 public/uploads/*
