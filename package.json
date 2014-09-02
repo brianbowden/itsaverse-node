@@ -17,7 +17,6 @@
     "node-compass": "0.2.3",
     "connect-busboy": "~0.0.1",
     "node-tesseract": "~0.2.6",
-    "node-uuid": "~1.4.1",
-    "passport": "0.2.1"
+    "node-uuid": "~1.4.1"
   }
 }

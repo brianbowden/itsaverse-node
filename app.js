@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var busboy = require('connect-busboy');
+var passport = require('passport');
 
 var routes = require('./routes/index');
 var apiRoutes = require('./routes/api');
@@ -24,10 +25,13 @@ app.use(cookieParser());
 app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(busboy());
+app.use(passport.initialize());
 
 app.use('/', routes);
 app.use('/api', apiRoutes);
 app.use('/users', users);
+
+
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

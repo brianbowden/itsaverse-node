@@ -6,18 +6,14 @@ var fs = require('fs');
 var path = require('path');
 var tess = require('node-tesseract');
 var uuid = require('node-uuid');
+var apiKeyValidator = require('../api_key_validator');
 
 var filepath;
 
+router.use(apiKeyValidator);
+
 router.post('/analyze', function(req, res) {
   var fstream;
-  debugger;
-
-  if (!req.params.key || req.params.key !=== process.env.ITSAVERSE_API_KEY) {
-    res.status(400);
-    res.json({status: "unauthorized"});
-    return;
-  }
 
   if (req.busboy) {
     req.pipe(req.busboy);
