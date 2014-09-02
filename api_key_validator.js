@@ -2,7 +2,7 @@ var config = require('./config');
 
 function validate(req, res, next) {
 
-  var apiKey = req.headers['api_key'];
+  var apiKey = req.headers['api-key'];
   if (!apiKey) {
     unauthorized(res);
     return;
