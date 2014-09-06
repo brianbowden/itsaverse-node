@@ -16,7 +16,7 @@
     "hjs": "~0.0.6",
     "node-compass": "0.2.3",
     "connect-busboy": "~0.0.1",
-    "node-tesseract": "~0.2.6",
-    "node-uuid": "~1.4.1"
+    "node-uuid": "~1.4.1",
+    "tesseract": "git://github.com/brianbowden/node-tesseract.git"
   }
 }
